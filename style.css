@@ -24,9 +24,9 @@ input, textarea {
     margin-top: 5px;
     padding: 8px;
     font-size: 16px;
-    color: #001f3f; /* 入力欄の文字色を設定 */
-    background-color: #fff; /* 背景色を白に設定 */
-    border-radius: 5px; /* 角を丸くする */
+    color: #001f3f; 
+    background-color: #fff; 
+    border-radius: 5px; 
 }
 
 button {
@@ -34,15 +34,15 @@ button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 20px;  /* 横幅に余裕を持たせる */
-    border-radius: 12px;  /* 丸い角を作る */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* 影を追加 */
-    transition: all 0.3s ease; /* スムーズなホバートランジション */
+    padding: 10px 20px;  
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);  /
+    transition: all 0.3s ease; 
 }
 
 button:hover {
     background-color: #45a049;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  /* ホバー時に強くなる影 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 3);  
 }
 
 body, h1, p, label, a, button {
