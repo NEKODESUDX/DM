@@ -1,8 +1,7 @@
-/* style.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #001f3f; 
-    color: white;
+    background-color: #001f3f;
+    color: #fff;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -21,11 +20,11 @@ label {
     margin-top: 10px;
 }
 
-input, button, textarea {
+input, textarea {
     margin-top: 5px;
     padding: 8px;
     font-size: 16px;
-    color: #006400; 
+    color: #006400; /* 濃い緑色 */
 }
 
 button {
@@ -40,3 +39,6 @@ button:hover {
     background-color: #45a049;
 }
 
+body, h1, p, label, a, button {
+    color: white;
+}
