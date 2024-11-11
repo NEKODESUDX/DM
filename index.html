@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -16,57 +14,61 @@
     <meta property="og:image" content="https://i.imgur.com/JTkB9AC.png">
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        body, h1, p, label, a, input, textarea, button {
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <h1>Discord Mass Group Manager</h1>
     <br>
     <p>注意: discordの仕様上グループ作成とメンバー追加は数分間のレートリミットがあります(追加は夜間推奨)</p>
-<p>グループを作りながら追加は出来ません 十分に作り終わってからメンバーを追加してください</p>
- <p>入力した内容は保存されません ページを閉じるかリロードする前にコピーボタンを押してメモしてください</p>
- <p>一つのグループに10人までしか追加出来ません 10人分使用したグループIDは入力しないでください</p>
- <p>動作の実行中にボタンの連打や他のボタンを押さないでください</p>
- <p>このタブは必ず開いて置いてください 途中でブラウザが閉じてしまとグループ追加が最初からやり直しになり同じグループに追加リクエストを送ってしまうのでバグが発生します</p>
-<p>ブラウザを閉じてしまった場合は既に追加されてるグループをID入力欄から手動で削除してください</p>  
+    <p>グループを作りながら追加は出来ません 十分に作り終わってからメンバーを追加してください</p>
+    <p>入力した内容は保存されません ページを閉じるかリロードする前にコピーボタンを押してメモしてください</p>
+    <p>一つのグループに10人までしか追加出来ません 10人分使用したグループIDは入力しないでください</p>
+    <p>動作の実行中にボタンの連打や他のボタンを押さないでください</p>
+    <p>このタブは必ず開いて置いてください 途中でブラウザが閉じてしまとグループ追加が最初からやり直しになり同じグループに追加リクエストを送ってしまうのでバグが発生します</p>
+    <p>ブラウザを閉じてしまった場合は既に追加されてるグループをID入力欄から手動で削除してください</p>  
     <br>
     <a href="https://discord.gg/DPmPdpcNqs">開発者サポートサーバー(discord)</a>
     <br>
     <a href="https://youtu.be/NTrzk7bxotg?si=Nd482zjloHVn6V4R">token取得方法(youtube)</a>
     <form id="groupForm">
-        <label for="token">トークン:</label>
+        <label for="token">Token:</label>
         <input type="text" id="token" name="token" required>
-        <button type="button" onclick="copyToClipboard('token')">コピー</button>
+        <button type="button" onclick="copyToClipboard('token')">Copy</button>
 
-        <label for="groupId">グループID (取得結果または自分で入力):</label>
+        <label for="groupId">Group ID (Enter manually or from results):</label>
         <textarea id="groupId" name="groupId" rows="10"></textarea>
-        <button type="button" onclick="copyToClipboard('groupId')">コピー</button>
+        <button type="button" onclick="copyToClipboard('groupId')">Copy</button>
 
-        <label for="userIds">ユーザーID (改行区切りで入力):</label>
+        <label for="userIds">User IDs (Enter separated by new lines):</label>
         <textarea id="userIds" name="userIds" rows="10"></textarea>
-        <button type="button" onclick="copyToClipboard('userIds')">コピー</button>
+        <button type="button" onclick="copyToClipboard('userIds')">Copy</button>
 
-        <label for="message">送信メッセージ:</label>
+        <label for="message">Message to send:</label>
         <input type="text" id="message" name="message">
         
-        <label for="delay">メッセージ送信の遅延 (秒):</label>
+        <label for="delay">Message send delay (seconds):</label>
         <input type="number" id="delay" name="delay" value="1" min="0.1" step="0.1">
 
-        <label for="baseNames">グループ名 (変更) カンマ区切りで入力で複数指定可能:</label>
+        <label for="baseNames">Group names (comma-separated for multiple):</label>
         <input type="text" id="baseNames" name="baseNames">
 
-        <label for="iconUrl">アイコン画像URL:</label>
+        <label for="iconUrl">Icon image URL:</label>
         <input type="text" id="iconUrl" name="iconUrl">
 
-        
-        <button type="button" onclick="createGroups()">グループ作成 (レートリミット10回/10分)</button>
-        <button type="button" onclick="sendMessage()">メッセージ送信</button>
-        <button type="button" onclick="addUsers()">ユーザー追加 (レートリミット10回/120秒)</button>
-<label for="startDelay">ユーザー追加開始までの時間 (分後):</label>
-<input type="number" id="startDelay" name="startDelay" value="0" min="0">
-        <button type="button" onclick="changeGroupNames()">グループ名変更</button>
-        <button type="button" onclick="changeGroupIcons()">グループアイコン変更</button>
+        <button type="button" onclick="createGroups()">Create Groups (Rate Limit: 10 times/10 minutes)</button>
+        <button type="button" onclick="sendMessage()">Send Message</button>
+        <button type="button" onclick="addUsers()">Add Users (Rate Limit: 10 times/120 seconds)</button>
+        <label for="startDelay">Time until user addition starts (minutes):</label>
+        <input type="number" id="startDelay" name="startDelay" value="0" min="0">
+        <button type="button" onclick="changeGroupNames()">Change Group Names</button>
+        <button type="button" onclick="changeGroupIcons()">Change Group Icons</button>
     </form>
 
-    <p id="status">ステータス: 準備完了</p>
+    <p id="status">Status: Ready</p>
 
     <script src="script.js"></script>
 </body>
