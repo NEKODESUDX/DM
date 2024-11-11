@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #001f3f; /* 黒い紺色 */
+    color: #fff; /* 文字色を白に */
     margin: 0;
     padding: 20px;
     display: flex;
