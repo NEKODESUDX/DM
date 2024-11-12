@@ -35,14 +35,14 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;  
-    border-radius: 5px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);  /
+    border-radius: 0px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 10);  /
     transition: all 0.3s ease; 
 }
 
 button:hover {
     background-color: #45a049;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 3);  
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 15);  
 }
 
 body, h1, p, label, a, button {
