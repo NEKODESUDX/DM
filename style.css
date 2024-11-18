@@ -50,7 +50,7 @@ body, h1, p, label, a, button {
 }
 
 
- #errorLog {
+ errorLog {
         width: 100%;
         height: 150px;
         margin-top: 20px;
