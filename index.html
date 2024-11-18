@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -83,13 +82,15 @@
 
     <p id="status">ステータス: 準備完了</p>
 
-    <div id="errorLog"></div>
+    <ul id="errorLog"></ul>
 
     <script src="script.js"></script>
     <script>
         function logError(message) {
-            const errorLog = document.getElementById('status');
-            errorLog.innerHTML += message + '<br>';
+            const errorLog = document.getElementById('errorLog');
+            const listItem = document.createElement('li');
+            listItem.textContent = message;
+            errorLog.appendChild(listItem);
         }
 
         window.onerror = function(message, source, lineno, colno, error) {
