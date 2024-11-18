@@ -76,20 +76,15 @@ LTC: MSU7xJHQJzocME3xLQmtAKfow36nwhuZ9Y
     </form>
 
     <p id="status">ステータス: 準備完了</p>
-
-    <div id="errorLog">エラーログ:</div>
-
-    <script src="script.js"></script>
-    <script>
-        function logError(message) {
-            const errorLog = document.getElementById('errorLog');
-            errorLog.textContent += message + '\\n';
-        }
-
-        window.onerror = function(message, source, lineno, colno, error) {
-            logError(\`[Error] \${message} at \${source}:\${lineno}:\${colno}\`);
-        };
-    </script>
-
+<div id="errorLog">エラーログ:</div>
+<script>
+    function logError(message) {
+        const errorLog = document.getElementById('errorLog');
+        errorLog.textContent += message + '\n';
+    }
+    window.onerror = function(message, source, lineno, colno, error) {
+        logError(`[Error] ${message} at ${source}:${lineno}:${colno}`);
+    };
+</script>
 </body>
 </html>
