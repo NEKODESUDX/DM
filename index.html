@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -18,6 +17,17 @@
     <style>
         body, h1, p, label, a, button {
             color: white;
+        }
+        #status {
+            width: 100%;
+            height: 150px;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #333;
+            color: white;
+            overflow-y: scroll;
+            white-space: pre-wrap;
         }
     </style>
 </head>
@@ -58,7 +68,7 @@
         <label for="baseNames">グループ名 (変更) カンマ区切りで入力で複数指定可能:</label>
         <input type="text" id="baseNames" name="baseNames">
 
-        <label for="iconUrl">アイコン画像URL:</label>
+                <label for="iconUrl">アイコン画像URL:</label>
         <input type="text" id="iconUrl" name="iconUrl">
 
         <button type="button" onclick="createGroups()">グループ作成 (レートリミット10回/10分)</button>
@@ -72,17 +82,17 @@
 
     <p id="status">ステータス: 準備完了</p>
 
-    <div id="errorLog">エラーログ:</div>
+    <div id="status"></div>
 
     <script src="script.js"></script>
     <script>
         function logError(message) {
-            const errorLog = document.getElementById('errorLog');
-            errorLog.textContent += message + '\n';
+            const errorLog = document.getElementById('status');
+            errorLog.textContent += message + '\\n';
         }
 
         window.onerror = function(message, source, lineno, colno, error) {
-                        logError(`[Error] ${message} at ${source}:${lineno}:${colno}`);
+            logError(`[Error] ${message} at ${source}:${lineno}:${colno}`);
         };
     </script>
 </body>
