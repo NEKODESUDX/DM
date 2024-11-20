@@ -18,15 +18,15 @@ form {
 
 label {
     margin-top: 10px;
-    color: #fff; /* 文字の色を白に変更 */
+    color: #fff;
 }
 
 input, textarea {
     margin-top: 5px;
     padding: 8px;
     font-size: 16px;
-    color: #fff; /* 文字の色を白に変更 */
-    background-color: rgba(255, 255, 255, 0.5); /* 半透明に変更 */
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.7); 
     border-radius: 5px; 
     border: none;
     outline: none;
