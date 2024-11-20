@@ -18,15 +18,18 @@ form {
 
 label {
     margin-top: 10px;
+    color: #fff; /* 文字の色を白に変更 */
 }
 
 input, textarea {
     margin-top: 5px;
     padding: 8px;
     font-size: 16px;
-    color: #001f3f; 
-    background-color: #fff; 
+    color: #fff; /* 文字の色を白に変更 */
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明に変更 */
     border-radius: 5px; 
+    border: none;
+    outline: none;
 }
 
 button {
@@ -36,13 +39,13 @@ button {
     border: none;
     padding: 10px 20px;  
     border-radius: 0px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 10);  /
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: all 0.3s ease; 
 }
 
 button:hover {
     background-color: #45a049;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 15);  
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
 }
 
 body, h1, p, label, a, button {
