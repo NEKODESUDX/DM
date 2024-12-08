@@ -84,6 +84,18 @@
         <input type="number" id="startDelay" name="startDelay" value="0" min="0">
         <button type="button" onclick="changeGroupNames()">グループ名変更</button>
         <button type="button" onclick="changeGroupIcons()">グループアイコン変更</button>
+               
+<div class="dividing">
+    <p class="sectionTitle">Create Friend Invite</p>
+    <button type="button" class="sectionButton" id="createFriendInvite">Create Invite</button>
+</div>
+
+
+<div class="dividing">
+    <p class="sectionTitle">Friend Invite URL</p>
+    <input type="text" id="friendInviteUrl" class="textOutput" readonly>
+    <button type="button" class="sectionButton" onclick="copyToClipboard('friendInviteUrl')">Copy URL</button>
+</div>
     </form>
 
     <p id="status">ステータス: 準備完了</p>
