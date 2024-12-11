@@ -55,7 +55,7 @@ body, h1, p, label, a, button {
 }
 
 
-#status {
+status {
             width: 100%;
             height: 150px;
             margin-top: 20px;
