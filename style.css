@@ -22,16 +22,19 @@ label {
 }
 
 input, textarea {
+    width: 100%; 
+    max-width: 400px; 
     margin-top: 5px;
     padding: 8px;
     font-size: 16px;
     color: #fff;
-    background-color: rgba(255, 255, 255, 1); 
-    border-radius: 5px; 
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
     border: none;
     outline: none;
-    color: #474747;
+    color: #007510;
 }
+
 
 button {
     cursor: pointer;
