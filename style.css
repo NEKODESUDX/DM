@@ -32,13 +32,13 @@ input, textarea {
     border-radius: 5px;
     border: none;
     outline: none;
-    color: #007510;
+    color: #000000;
 }
 
 
 button {
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #044a00;
     color: white;
     border: none;
     padding: 10px 20px;  
