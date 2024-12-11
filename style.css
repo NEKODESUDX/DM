@@ -5,17 +5,17 @@ body {
     margin: 0;
     padding: 20px;
     display: flex;
-    justify-content: center;  /* 水平方向の中央揃え */
-    align-items: center;      /* 垂直方向の中央揃え */
-    height: 100vh;            /* ビューポート全体の高さを占める */
-    flex-direction: column;   /* 縦方向に配置 */
+    justify-content: center;  
+    align-items: center;    
+    height: 100vh;            
+    flex-direction: column;   
 }
 
 form {
     display: flex;
     flex-direction: column;
-    max-width: 600px;         /* フォームの最大幅を600pxに設定 */
-    width: 100%;              /* フォームを親要素の幅に合わせる */
+    max-width: 600px;       
+    width: 100%;             
 }
 
 label {
@@ -32,8 +32,8 @@ input, textarea {
     border: none;
     outline: none;
     color: #474747;
-    width: 100%;              /* 幅を100%に設定 */
-    box-sizing: border-box;   /* パディングを含めた幅調整 */
+    width: 100%;              
+    box-sizing: border-box;   
 }
 
 button {
@@ -45,7 +45,7 @@ button {
     border-radius: 0px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: all 0.3s ease; 
-    margin-top: 10px;         /* ボタンに余白を追加 */
+    margin-top: 10px;        
 }
 
 button:hover {
@@ -57,7 +57,7 @@ body, h1, p, label, a, button {
     color: white;
 }
 
-#status {
+status {
     width: 100%;
     height: 150px;
     margin-top: 20px;
@@ -67,5 +67,5 @@ body, h1, p, label, a, button {
     color: white;
     overflow-y: scroll;
     white-space: pre-wrap;
-    box-sizing: border-box; /* パディングを含めた幅調整 */
+    box-sizing: border-box; 
 }
