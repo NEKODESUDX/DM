@@ -57,9 +57,15 @@
         <input type="text" id="token" name="token" required>
         <button type="button" onclick="copyToClipboard('token')">コピー</button>
 
-        <label for="groupId">グループID (取得結果または自分で入力):</label>
+        <label for="groupId">グループID (作成/メッセージ送信/アイコン変更/名前変更):</label>
         <textarea id="groupId" name="groupId" rows="10"></textarea>
         <button type="button" onclick="copyToClipboard('groupId')">コピー</button>
+
+        <label for="modifyGroupId">グループID (ユーザー追加):</label>
+        <textarea id="modifyGroupId" name="modifyGroupId" rows="10" class="textOutput"></textarea>
+        <button type="button" onclick="copyToClipboard('modifyGroupId')">コピー</button>
+        <p>⚠️ユーザー追加後に自動削除</p>
+
 
         <label for="userIds">ユーザーID (改行区切りで入力):</label>
         <textarea id="userIds" name="userIds" rows="10"></textarea>
