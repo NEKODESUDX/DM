@@ -23,42 +23,55 @@ label {
 
 input, textarea {
     width: 30%; 
-    max-width: 400px; 
+    max-width: 400px;
     margin-top: 5px;
-    padding: 8px;
+    padding: 10px; 
     font-size: 16px;
-    color: #fff;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #333; 
+    border: 1px solid #ccc; 
     border-radius: 5px;
-    border: none;
+    color: white; 
     outline: none;
-    color: #000000;
 }
 
+textarea {
+    height: 100px; 
+}
 
 button {
     cursor: pointer;
     background-color: #333333;
     color: white;
     border: none;
-    padding: 10px 20px;  
-    border-radius: 0px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: all 0.3s ease; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 button:hover {
     background-color: #45a049;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    background-color: #2e8b57;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
 }
 
 body, h1, p, label, a, button {
     color: white;
 }
 
-
-button:active {
-    background-color: #45a049; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-    transform: scale(0.98); 
+#status {
+    width: 30%; 
+    height: 150px; 
+    margin-top: 20px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    background-color: #333; 
+    color: white; 
+    overflow-y: scroll; 
+    white-space: pre-wrap; 
 }
