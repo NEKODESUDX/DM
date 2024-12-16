@@ -42,6 +42,8 @@
         <textarea id="groupId" name="groupId" rows="10"></textarea>
         <button type="button" onclick="copyToClipboard('groupId')">コピー</button>
 
+        <button type="button" onclick="createGroups()">グループ作成 (レートリミット10回/10分)</button>
+
         <label for="modifyGroupId">グループID (ユーザー追加):</label>
         <textarea id="modifyGroupId" name="modifyGroupId" rows="10" class="textOutput"></textarea>
         <button type="button" onclick="copyToClipboard('modifyGroupId')">コピー</button>
@@ -50,33 +52,36 @@
 
         <label for="userIds">ユーザーID (改行区切りで入力):</label>
         <textarea id="userIds" name="userIds" rows="10"></textarea>
-        <button type="button" onclick="copyToClipboard('userIds')">コピー</button>
+    
+        <label for="startDelay">ユーザー追加開始までの時間 (分後):</label>
+        <input type="number" id="startDelay" name="startDelay" value="0" min="0">
 
+        <button type="button" onclick="copyToClipboard('userIds')">コピー</button>
+        <button type="button" onclick="addUsers()">ユーザー追加 (レートリミット10回/120秒)</button>
+    
         <label for="message">送信メッセージ:</label>
         <input type="text" id="message" name="message">
         
         <label for="delay">メッセージ送信の遅延 (秒):</label>
         <input type="number" id="delay" name="delay" value="1" min="0.1" step="0.1">
 
+        <button type="button" onclick="sendMessage()">メッセージ送信</button>
+    
         <label for="baseNames">グループ名 (変更) カンマ区切りで入力で複数指定可能:</label>
         <input type="text" id="baseNames" name="baseNames">
 
+        <button type="button" onclick="changeGroupNames()">グループ名変更</button>
+    
         <label for="iconUrl">アイコン画像URL:</label>
         <input type="text" id="iconUrl" name="iconUrl">
-
-        <button type="button" onclick="createGroups()">グループ作成 (レートリミット10回/10分)</button>
-        <button type="button" onclick="sendMessage()">メッセージ送信</button>
-        <button type="button" onclick="addUsers()">ユーザー追加 (レートリミット10回/120秒)</button>
-        <label for="startDelay">ユーザー追加開始までの時間 (分後):</label>
-        <input type="number" id="startDelay" name="startDelay" value="0" min="0">
-        <button type="button" onclick="changeGroupNames()">グループ名変更</button>
+        
         <button type="button" onclick="changeGroupIcons()">グループアイコン変更</button>
                
-<div class="dividing">
-    <p class="sectionTitle">フレンド招待URL</p>
-    <button type="button" class="sectionButton" id="createFriendInvite">リンク作成</button>
-</div>
-<div class="dividing">
+        <div class="dividing">
+        <p class="sectionTitle">フレンド招待URL</p>
+        <button type="button" class="sectionButton" id="createFriendInvite">リンク作成</button>
+        </div>
+        <div class="dividing">
     <input type="text" id="friendInviteUrl" class="textOutput" readonly>
     <button type="button" class="sectionButton" onclick="copyToClipboard('friendInviteUrl')">コピー</button>
 </div>
