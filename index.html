@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>AARR DM V3</title>
+    <title>AARR DM 軍用</title>
     <meta name="description" content="グループDMツールです">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#FF0000">
@@ -14,10 +14,7 @@
     <meta property="og:image" content="https://i.imgur.com/JTkB9AC.png">
 
     <link rel="stylesheet" href="style.css">
-      <style>
-        body, h1, p, label, a, button {
-            color: white;
-        }
+    <style>
         #status {
             width: 100%;
             height: 150px;
@@ -32,53 +29,61 @@
     </style>
 </head>
 <body>
-<br>
-    <h1>Mass Group Manager</h1>
-        <label for="token">トークン:</label>
-        <input type="text" id="token" name="token" required>
-        <button type="button" onclick="copyToClipboard('token')">コピー</button>
+        <h1>Mass Group Manager</h1>
+<label for="token">トークン:</label>
+<input type="text" id="token" name="token" required placeholder="トークンを入力">
+<button type="button" onclick="copyToClipboard('token')">コピー</button>
 
-        <label for="groupId">グループID (作成/メッセージ送信/アイコン変更/名前変更):</label>
-        <textarea id="groupId" name="groupId" rows="10"></textarea>
-        <button type="button" onclick="copyToClipboard('groupId')">コピー</button>
+<label for="groupId">グループID (作成/メッセージ送信/アイコン変更/名前変更):</label>
+<textarea id="groupId" name="groupId" rows="10" placeholder="改行で区切ってグループIDを入力"></textarea>
+<button type="button" onclick="copyToClipboard('groupId')">コピー</button>
 
-        <button type="button" onclick="createGroups()">グループ作成 (レートリミット10回/10分)</button>
+<button type="button" onclick="createGroups()">グループ作成 (レートリミット10回/10分)</button>
 
-        <label for="modifyGroupId">グループID (ユーザー追加):</label>
-        <textarea id="modifyGroupId" name="modifyGroupId" rows="10" class="textOutput"></textarea>
-        <button type="button" onclick="copyToClipboard('modifyGroupId')">コピー</button>
-        <p>⚠️ユーザー追加が完了したグループIDは入力欄から自動削除されます</p>
+<label for="userIds">ユーザーID (ユーザー追加):</label>
+<textarea id="userIds" name="userIds" rows="10" placeholder="改行で区切ってユーザーIDを入力"></textarea>
 
+<label for="modifyGroupId">グループID (ユーザー追加):</label>
+<textarea id="modifyGroupId" name="modifyGroupId" rows="10" class="textOutput" placeholder="改行で区切ってグループIDを入力"></textarea>
+<button type="button" onclick="copyToClipboard('modifyGroupId')">コピー</button>
+<p>⚠️ユーザー追加後に自動削除</p>
 
-        <label for="userIds">ユーザーID (改行区切りで入力):</label>
-        <textarea id="userIds" name="userIds" rows="10"></textarea>
-    
+<label for="kickuserIds">ユーザーID (ユーザーキック):</label>
+<textarea id="kickuserIds" name="kickuserIds" rows="10" placeholder="改行で区切ってユーザーIDを入力"></textarea>
+
+<label for="kickGroupId">グループID (ユーザーキック):</label>
+<textarea id="kickGroupId" name="kickGroupId" rows="10" class="textOutput" placeholder="改行で区切ってグループIDを入力"></textarea>
+<button type="button" onclick="copyToClipboard('kickGroupId')">コピー</button>
+<p>⚠️ユーザーキック後に自動削除</p>
+
+        
+
         <label for="startDelay">ユーザー追加開始までの時間 (分後):</label>
         <input type="number" id="startDelay" name="startDelay" value="0" min="0">
 
         <button type="button" onclick="copyToClipboard('userIds')">コピー</button>
         <button type="button" onclick="addUsers()">ユーザー追加 (レートリミット10回/120秒)</button>
+        <br>
+        <button type="button" onclick="kickUsers()">ユーザーキック (使用する際は注意)</button>
 
-   
-    
         <label for="message">送信メッセージ:</label>
         <input type="text" id="message" name="message">
-        
+
         <label for="delay">メッセージ送信の遅延 (秒):</label>
         <input type="number" id="delay" name="delay" value="1" min="0.1" step="0.1">
 
         <button type="button" onclick="sendMessage()">メッセージ送信</button>
-    
+
         <label for="baseNames">グループ名 (変更) カンマ区切りで入力で複数指定可能:</label>
         <input type="text" id="baseNames" name="baseNames">
 
         <button type="button" onclick="changeGroupNames()">グループ名変更</button>
-    
+
         <label for="iconUrl">アイコン画像URL:</label>
         <input type="text" id="iconUrl" name="iconUrl">
-        
+
         <button type="button" onclick="changeGroupIcons()">グループアイコン変更</button>
-               
+
         <div class="dividing">
         <p class="sectionTitle">フレンド招待URL</p>
         <button type="button" class="sectionButton" id="createFriendInvite">リンク作成</button>
@@ -95,6 +100,7 @@
 
     <script src="script.js"></script>
    
+
  ❤寄付 If you like this tool, please donate to the developers
     BTC: 37fB226Pyoc4so7H6KVMjxWzRKeporBDfW
     LTC: MSU7xJHQJzocME3xLQmtAKfow36nwhuZ9Y
