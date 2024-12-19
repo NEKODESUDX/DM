@@ -49,6 +49,10 @@
         <button type="button" onclick="copyToClipboard('modifyGroupId')">コピー</button>
         <p>⚠️ユーザー追加が完了したグループIDは入力欄から自動削除されます</p>
 
+        <label for="kickGroupId">グループID (ユーザーキック):</label>
+        <textarea id="kickGroupId" name="kickGroupId" rows="10" class="textOutput"></textarea>
+        <button type="button" onclick="copyToClipboard('kickGroupId')">コピー</button>
+        <p>⚠️ユーザーキック後に自動削除</p>
 
         <label for="userIds">ユーザーID (改行区切りで入力):</label>
         <textarea id="userIds" name="userIds" rows="10"></textarea>
@@ -58,6 +62,8 @@
 
         <button type="button" onclick="copyToClipboard('userIds')">コピー</button>
         <button type="button" onclick="addUsers()">ユーザー追加 (レートリミット10回/120秒)</button>
+
+        <button type="button" onclick="kickUsers()">ユーザーキック開始</button>
     
         <label for="message">送信メッセージ:</label>
         <input type="text" id="message" name="message">
