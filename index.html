@@ -94,18 +94,7 @@
     <ul id="errorLog"></ul>
 
     <script src="script.js"></script>
-    <script>
-        function logError(message) {
-            const errorLog = document.getElementById('errorLog');
-            const listItem = document.createElement('li');
-            listItem.textContent = message;
-            errorLog.appendChild(listItem);
-        }
-
-        window.onerror = function(message, source, lineno, colno, error) {
-            logError(`[Error] ${message} at ${source}:${lineno}:${colno}`);
-        };
-    </script>
+   
  ❤寄付 If you like this tool, please donate to the developers
     BTC: 37fB226Pyoc4so7H6KVMjxWzRKeporBDfW
     LTC: MSU7xJHQJzocME3xLQmtAKfow36nwhuZ9Y
