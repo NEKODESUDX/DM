@@ -38,11 +38,9 @@
 <textarea id="groupId" name="groupId" rows="10" placeholder="改行で区切ってグループIDを入力"></textarea>
 <button type="button" onclick="copyToClipboard('groupId')">コピー</button>
 
-<button type="button" onclick="createGroups()">グループ作成 (レートリミット10回/10分)</button>
-
  <label for="baseNames">グループ名 (作成/変更) カンマ区切りで入力で複数指定可能:</label>
 <input type="text" id="baseNames" name="baseNames">
-
+<button type="button" onclick="createGroups()">グループ作成 (レートリミット10回/10分)</button>
 <button type="button" onclick="changeGroupNames()">グループ名変更</button>
 
 <label for="iconUrl">アイコン画像URL (jpg/png):</label>
