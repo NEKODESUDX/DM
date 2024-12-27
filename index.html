@@ -47,6 +47,13 @@
 <input type="text" id="iconUrl" name="iconUrl">
 
 <button type="button" onclick="changeGroupIcons()">グループアイコン変更</button>
+        <label for="message">送信メッセージ:</label>
+        <input type="text" id="message" name="message">
+
+        <label for="delay">メッセージ送信の遅延 (秒):</label>
+        <input type="number" id="delay" name="delay" value="1" min="0.1" step="0.1">
+
+        <button type="button" onclick="sendMessage()">メッセージ送信</button>
     
 <label for="userIds">ユーザーID (ユーザー追加):</label>
 <textarea id="userIds" name="userIds" rows="10" placeholder="改行で区切ってユーザーIDを入力"></textarea>
@@ -65,13 +72,7 @@
         <button type="button" onclick="addUsers()">ユーザー追加 (レートリミット10回/120秒)</button>
         <p>⚠️追加は夜間推奨</p>  
 
-        <label for="message">送信メッセージ:</label>
-        <input type="text" id="message" name="message">
-
-        <label for="delay">メッセージ送信の遅延 (秒):</label>
-        <input type="number" id="delay" name="delay" value="1" min="0.1" step="0.1">
-
-        <button type="button" onclick="sendMessage()">メッセージ送信</button>
+      
 
         <div class="dividing">
         <p class="sectionTitle">フレンド招待URL</p>
