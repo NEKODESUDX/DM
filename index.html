@@ -40,6 +40,16 @@
 
 <button type="button" onclick="createGroups()">グループ作成 (レートリミット10回/10分)</button>
 
+ <label for="baseNames">グループ名 (作成/変更) カンマ区切りで入力で複数指定可能:</label>
+<input type="text" id="baseNames" name="baseNames">
+
+<button type="button" onclick="changeGroupNames()">グループ名変更</button>
+
+<label for="iconUrl">アイコン画像URL (jpg/png):</label>
+<input type="text" id="iconUrl" name="iconUrl">
+
+<button type="button" onclick="changeGroupIcons()">グループアイコン変更</button>
+    
 <label for="userIds">ユーザーID (ユーザー追加):</label>
 <textarea id="userIds" name="userIds" rows="10" placeholder="改行で区切ってユーザーIDを入力"></textarea>
 
@@ -64,16 +74,6 @@
         <input type="number" id="delay" name="delay" value="1" min="0.1" step="0.1">
 
         <button type="button" onclick="sendMessage()">メッセージ送信</button>
-
-        <label for="baseNames">グループ名 (作成/変更) カンマ区切りで入力で複数指定可能:</label>
-        <input type="text" id="baseNames" name="baseNames">
-
-        <button type="button" onclick="changeGroupNames()">グループ名変更</button>
-
-        <label for="iconUrl">アイコン画像URL (jpg/png):</label>
-        <input type="text" id="iconUrl" name="iconUrl">
-
-        <button type="button" onclick="changeGroupIcons()">グループアイコン変更</button>
 
         <div class="dividing">
         <p class="sectionTitle">フレンド招待URL</p>
