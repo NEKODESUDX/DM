@@ -72,7 +72,15 @@
         <button type="button" onclick="addUsers()">ユーザー追加 (レートリミット10回/120秒)</button>
         <p>⚠️追加は夜間推奨</p>  
 
-      
+     <br>
+
+        
+        <br>
+        <button id="fetchGroupIds">Group IDを自動取得</button>
+
+        <textarea id="groupIdsBox" name="groupIdsBox" rows="10" class="textOutput" placeholder="出力結果"></textarea>
+        <button type="button" onclick="copyToClipboard('fetchGroupIds')">コピー</button>
+        <p>⚠️取得するグループ数が多過ぎるとdiscordのAPIが応答出来ない可能性があります</p>
 
         <div class="dividing">
         <p class="sectionTitle">フレンド招待URL</p>
@@ -91,28 +99,6 @@
     <script src="script.js"></script>
    
 
- ❤寄付 If you like this tool, please donate to the developers
-    BTC: 37fB226Pyoc4so7H6KVMjxWzRKeporBDfW
-    LTC: MSU7xJHQJzocME3xLQmtAKfow36nwhuZ9Y
-    <br>
- <p>注意: discordの仕様上グループ作成とメンバー追加は数分間のレートリミットがあります(追加は夜間推奨)</p>
-    <p>グループを作りながら追加は出来ません 十分に作り終わってからメンバーを追加してください</p>
-    <p>入力した内容は保存されません ページを閉じるかリロードする前にコピーボタンを押してメモしてください</p>
-    <p>一つのグループに10人までしか追加出来ません 10人分使用したグループIDは入力しないでください</p>
-    <p>動作の実行中にボタンの連打や他のボタンを押さないでください</p>
-    <p>このタブは必ず開いて置いてください 途中でブラウザが閉じてしまうとグループ追加が最初からやり直しになり、同じグループに追加リクエストを送ってしまうのでバグが発生します</p>
-    <a href="http://www.cityjp.com/javascript/programmer/text16.html" target="_blank">途中で閉じて閉まった場合はテキスト逆転ツールを使って逆から追加をやり直す事を推奨</a>
-    <p>ブラウザを閉じてしまった場合は既に追加されているグループをID入力欄から手動で削除してください</p>  
-    <a href="https://github.com/NEKODESUDX/DMID-cleaner" target="_blank">参加していないグループIDの削除と全ID取得ツール</a>
-    <a href="https://discord.gg/DPmPdpcNqs" target="_blank">開発者サポートサーバー(discord)</a>
-    <a href="https://youtu.be/NTrzk7bxotg?si=Nd482zjloHVn6V4R" target="_blank">token取得方法(youtube)</a>
-    <a href="https://nekodesudx.github.io/emoji-ja/" target="_blank">絵文字追加ツール(github)</a>
-    <h2>拡張機能</h2>
-    <a href="https://www.tampermonkey.net/" target="_blank">①tampermonkey [依存環境]</a><br>
-    <a href="https://greasyfork.org/ja/scripts/518295-discord-uid-extractor" target="_blank">②UserID取得</a><br>
-    <a href="https://greasyfork.org/ja/scripts/518683-discord-channel-id-extractor/code" target="_blank">③Channel/Group ID取得</a><br>
-    <p>UerID フレンドリスト画面 → 全て表示 → 拡張機能起動</p>
-　　<p>GroupID</p> ダイレクトメッセージ画面 → 拡張機能起動 →グループ欄をスクロール</p>
-    <p>動作の実行中にボタンの連打や他のボタンを押さないでください</p>
+
 </body>
 </html>
